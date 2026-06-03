@@ -322,10 +322,10 @@ export const seedMockUsers = async (): Promise<void> => {
     console.log('Ensuring admin user exists...');
     
     const adminUser = {
-      loginId: 'nitin@gmail.com',
-      password: 'smai_donato@2330', // In production, this should be hashed
+      loginId: 'admin.sample',
+      password: 'admin@1234', // In production, this should be hashed
       fullName: 'System Administrator',
-      email: 'nitin@gmail.com',
+      email: 'admin@sample.local',
       role: 'admin' as SystemRole,
       isActive: true,
       permissions: getRolePermissions('admin'),
@@ -359,10 +359,10 @@ export const forceSeedMockUsers = async (): Promise<void> => {
     console.log('Force seeding admin user...');
     
     const adminUser = {
-      loginId: 'nitin@gmail.com',
-      password: 'smai_donato@2330',
+      loginId: 'admin.sample',
+      password: 'admin@1234',
       fullName: 'System Administrator',
-      email: 'nitin@gmail.com',
+      email: 'admin@sample.local',
       role: 'admin' as SystemRole,
       isActive: true,
       permissions: getRolePermissions('admin'),

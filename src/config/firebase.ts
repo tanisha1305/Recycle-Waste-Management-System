@@ -4,12 +4,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCUpvbVNuu60Rj5LOHtCD8LE4l7vT1r3iw",
-  authDomain: "recycle-manager-2ab1b.firebaseapp.com",
-  projectId: "recycle-manager-2ab1b",
-  storageBucket: "recycle-manager-2ab1b.firebasestorage.app",
-  messagingSenderId: "862420994335",
-  appId: "1:862420994335:web:f9da1a32f6c5827cbf882a"
+  apiKey: "AIzaSyBW_o6drShCv_E8H4RaP4qMcAuRdyjzMLg",
+  authDomain: "recycle-waste-management-75e93.firebaseapp.com",
+  projectId: "recycle-waste-management-75e93",
+  storageBucket: "recycle-waste-management-75e93.firebasestorage.app",
+  messagingSenderId: "181008493307",
+  appId: "1:181008493307:web:dab0716f25829043b25e5e",
+  measurementId: "G-XDSR9P7MTF"
 };
 
 // Initialize Firebase

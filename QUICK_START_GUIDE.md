@@ -337,3 +337,12 @@ Your role-based login system is fully functional and tested. Start by logging in
 **Date:** November 28, 2024  
 **Status:** ✅ Complete and Ready to Use  
 **Build:** ✅ Successful (No Errors)
+
+---
+
+## Admin Sample Credentials (Generic)
+
+```
+Login ID: admin.sample
+Password: admin@1234
+```
