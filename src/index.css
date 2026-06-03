@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+	/* Modern Recycling Management palette */
+	--bg: #F8FAFC; /* Light slate background */
+	--primary: #10B981; /* Emerald green - eco-friendly */
+	--primary-dark: #059669; /* Darker emerald */
+	--secondary: #3B82F6; /* Bright blue */
+	--accent: #F59E0B; /* Amber accent */
+	--text: #1E293B; /* Slate 800 */
+	--text-light: #475569; /* Slate 600 */
+	--surface: #FFFFFF;
+	--muted: #64748B; /* Slate 500 */
+	--border: #E2E8F0; /* Slate 200 */
+	--success: #10B981;
+	--warning: #F59E0B;
+	--error: #EF4444;
+	--info: #3B82F6;
+}
+
+/* Fix double scrollbar issue - ensure only one unified scrollbar */
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+body{
+	background-color: var(--bg);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	color: var(--text);
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+/* Modern gradient backgrounds */
+.gradient-bg {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-green {
+	background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.gradient-blue {
+	background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+}
+
+/* Enhanced cards with modern shadows */
+.card {
+	background-color: var(--surface);
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	border-radius: 16px;
+	border: 1px solid var(--border);
+	position: relative;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-stat {
+	background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Modern button styles */
+.btn-primary {
+	background: var(--primary);
+	color: white;
+	padding: 0.75rem 1.5rem;
+	border-radius: 12px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+}
+
+.soft-btn{
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+/* Modern gradient background with pattern */
+.bg-pattern {
+	background-color: var(--bg);
+	background-image: 
+		radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+}
+
+/* Gradient Call-to-action button */
+.btn-gradient{
+	background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+	color: #fff;
+	border-radius: 12px;
+	padding: 0.75rem 1.5rem;
+	display: inline-flex; align-items:center; gap:0.5rem; font-weight:600;
+	box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+	transition: all 0.3s ease;
+}
+
+/* Section styling */
+.section-title{ 
+	font-weight: 700; 
+	font-size: 1.5rem;
+	color: var(--text);
+	letter-spacing: -0.025em;
+}
+
+/* Modern form inputs */
+input[type="text"], input[type="number"], input[type="email"], input[type="date"], select, textarea {
+	border: 1.5px solid var(--border);
+	padding: 0.75rem 1rem;
+	border-radius: 12px;
+	background: var(--surface);
+	transition: all 0.2s ease;
+	font-size: 0.875rem;
+}
+
+/* Hide spinner arrows from number inputs to prevent accidental scrolling */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+input:focus, select:focus, textarea:focus{ 
+	outline: none; 
+	border-color: var(--primary); 
+	box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Badge styles */
+.badge {
+	padding: 0.375rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+
+.badge-success {
+	background: rgba(16, 185, 129, 0.1);
+	color: var(--success);
+}
+
+.badge-warning {
+	background: rgba(245, 158, 11, 0.1);
+	color: var(--warning);
+}
+
+.badge-error {
+	background: rgba(239, 68, 68, 0.1);
+	color: var(--error);
+}
+
+.badge-info {
+	background: rgba(59, 130, 246, 0.1);
+	color: var(--info);
+}
+
+/* Material-friendly elevation levels */
+.elev-1{ box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.elev-2{ box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+.elev-3{ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+.transition-smooth{ transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* Stat card with icon */
+.stat-card {
+	background: white;
+	border-radius: 16px;
+	padding: 1.5rem;
+	border: 1px solid var(--border);
+	transition: all 0.3s ease;
+}
+
+.stat-icon {
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+/* Modern table styles */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+thead th {
+	background: var(--bg);
+	font-weight: 600;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-light);
+	padding: 1rem;
+	border-bottom: 2px solid var(--border);
+}
+
+tbody td {
+	padding: 1rem;
+	border-bottom: 1px solid var(--border);
+	font-size: 0.875rem;
+}
+
+/* color variants (match reference image warm/orange, aqua, purple) */
+.fc-warm{ background: linear-gradient(135deg, #ffb866 0%, #ff8a65 100%); }
+.fc-aqua{ background: linear-gradient(135deg, #7ce0d6 0%, #62d0ff 100%); }
+.fc-purple{ background: linear-gradient(135deg, #b39ddb 0%, #9fa8da 100%); }
+
+
+.modal-card { max-width: 820px; border-radius: 14px; overflow: hidden; }
+
+/* Custom scrollbar styling for inventory form horizontal scroll */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(46, 125, 50, 0.3);
+  border-radius: 4px;
+}
